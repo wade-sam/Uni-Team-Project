@@ -1,0 +1,40 @@
+- Logs and tracks queries
+- Based on Laravel PHP
+
+- Uses
+   Logs the following when a call is taken:
+Caller name
+Operator name
+Time of call
+Serial number of affected hardware
+[Optional] The OS used
+[Optional] The software affected
+The database must have a table of all personnel
+The operator must be able to query this table using the caller's name for the caller's:
+ID number
+Job title
+Department
+Telephone number
+The database must have a table of equipment with fields for:
+Serial number
+Equipment type
+Equipment make
+The database must have a table for authorised software
+Table is checked against when a caller reports a problem
+Checks that the caller's software is properly licensed and supported
+When a problem is logged, it should be given a problem number for quotation reasons if the ticket needs to be followed up on
+A new problem ticket should be created for each individual issue
+Every call must be recorded, even if it is about the same issue
+Each subsequent call on the same problem must still record the caller's name
+Notes should be taken on each call to state the reason behind calling
+When a problem is reported, the operator must allocate a problem type
+Problem type will be selected from a pre-defined list
+It is up to the operator to be able to select how specific a problem type is
+The problem type must be able to be altered at a later time
+If a problem can not be solved immediately then the operator must be able to use the problem type to look up which specialist to refer the problem to
+This specialist can be selected from a drop-down menu based on the problem type
+The system must be able to show how many problems a specialist is working on at the current time
+When a problem is solved, the operator must be able to log:
+The date and time of the event
+A note on how the problem was solved
+The name of the person who provided the solution
